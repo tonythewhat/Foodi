@@ -5,38 +5,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="scss/legourmand.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
     <title>Document</title>
 </head>
 
 <body>
     <div class="page-wrapper">
-        <div class="logo"><img class="logo" src="assets/ohmyfood.png" alt="logo">
+        <a href="foodhomepage.html"><i class="fa-solid fa-arrow-left"></i></a>
+        <div class="logo"><i class="fa-solid fa-arrow-left"></i><img class="logo" src="assets/ohmyfood.png" alt="logo">
         </div>
         <div class="image">
             <img src="assets/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Gourmand">
         </div>
         <div class="menu-wrapper">
-            <h3>Le Gourmand<i class="far heart fa-lg"></i></h3>
+            <h3>Le Gourmand
+                <i class="far fa-heart"></i>
+            </h3>
             <p>ENTREES</p>
             <div class="menu-item">
                 <h5>Tuna Carpaccio</h5>
-                <section>
+                <section class="description">
                     <p>seasoned with yuzu</p>
-                    <p>25€</p>
+                    <p class="price">25€</p>
                 </section>
             </div>
             <div class="menu-item">
                 <h5>Crunchy Lobster Croquets</h5>
                 <section>
                     <p>with seasonal vegetables</p>
-                    <p>35€</p>
+                    <p class="price">35€</p>
                 </section>
             </div>
             <div class="menu-item">
                 <h5>Mushroom soup</h5>
                 <section>
                     <p>with truffles</p>
-                    <p>20€</p>
+                    <p class="price">20€</p>
                 </section>
             </div>
             <p>MAIN DISH</p>
@@ -44,21 +54,21 @@
                 <h5>Roast Chicken with Provincal Herbs</h5>
                 <section>
                     <p>with truffle cream</p>
-                    <p>40€</p>
+                    <p class="price">40€</p>
                 </section>
             </div>
             <div class="menu-item">
                 <h5>Roasted Lobster</h5>
                 <section>
                     <p>with seasonal vegetables</p>
-                    <p>35€</p>
+                    <p class="price">35€</p>
                 </section>
             </div>
             <div class="menu-item">
                 <h5>Angust Beef Ribs</h5>
                 <section>
                     <p>with mashed parshnips</p>
-                    <p>44€</p>
+                    <p class="price">44€</p>
                 </section>
             </div>
             <p>DESSERTS</p>
@@ -66,29 +76,28 @@
                 <h5>Assorted Dessert Plate</h5>
                 <section>
                     <p>Chef's choice</p>
-                    <p>18€</p>
+                    <p class="price">18€</p>
                 </section>
             </div>
             <div class="menu-item">
                 <h5>Creme brulee</h5>
                 <section>
                     <p>Revisited</p>
-                    <p>22€</p>
+                    <p class="price">22€</p>
                 </section>
             </div>
             <div class="menu-item">
                 <h5>Tiramisu</h5>
                 <section>
                     <p>with hazelnuts</p>
-                    <p>23€</p>
+                    <p class="price">23€</p>
                 </section>
             </div>
         </div>
-        <div class="footer">ohmyfood</div>
         <div class="footer">
-            <h6>ohmyfood</h6>
+            <h3>ohmyfood</h3>
             <a href="#"><i class="fas fa-utensils"></i>Suggest a restaurant</a>
-            <a href="#"><i class="fas fa-hands-helping"></i>Become a partner</a>
+            <a href="#"><i class="fas fa-hands-helping fa-xs"></i>Become a partner</a>
             <a class="legal" href="#">Legal</a>
             <a class="contact" href="#">Contact</a>
         </div>

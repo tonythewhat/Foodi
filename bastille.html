@@ -5,82 +5,95 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" src="https://use.fontawesome.com/releases/v5.12.0/js/all.js">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="scss/bastille.css">
+    <link rel="stylesheet" src="https://use.fontawesome.com/releases/v6.0.0/js/all.js">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous" />
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
     <title>Document</title>
+    <script defer="" src="https://use.fontawesome.com/releases/v6.0.0/js/all.js"></script>
 </head>
 
 <body>
     <div class="page-wrapper">
+        <a href="foodhomepage.html"><i class="fa-solid fa-arrow-left"></i></a>
         <div class="logo"><img class="logo" src="assets/ohmyfood.png" alt="logo">
         </div>
         <div class="image">
             <img src="assets/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Bastille">
         </div>
         <div class="menu-wrapper">
-            <h3>Bastille<i class="far heart fa-lg"></i></h3>
-            <p>ENTREES</p>
+            <h2>
+                Bastille
+                <i class="far fa-heart"></i>
+            </h2>
+            <h4>ENTREES</h4>
             <div class="menu-item">
                 <h5>Citrus Squid Carpaccio</h5>
-                <section>
+                <section class="description">
                     <p>with orange zest</p>
-                    <p>25€</p>
+                    <p class="price">25€</p>
                 </section>
             </div>
             <div class="menu-item">
                 <h5>Grandmother's Vegetables Soup</h5>
-                <section>
+                <section class="description">
                     <p>Carrots, parsnips, Jerusalem artichoke</p>
-                    <p>35€</p>
+                    <p class="price">35€</p>
                 </section>
             </div>
             <div class="menu-item">
                 <h5>Onion Soup</h5>
-                <section>
+                <section class="description">
                     <p>Revisted</p>
-                    <p>20€</p>
+                    <p class="price">20€</p>
                 </section>
             </div>
             <p>MAIN DISH</p>
             <div class="menu-item">
                 <h5>Scallpos</h5>
-                <section>
+                <section class="description">
                     <p>with mashed parsnip</p>
-                    <p>40€</p>
+                    <p class="price">40€</p>
                 </section>
             </div>
             <div class="menu-item">
                 <h5>Magret de canard</h5>
-                <section>
+                <section class="description">
                     <p>with mashed potatoes</p>
-                    <p>35€</p>
-                </section>
+                    <p class="price">35€</p>
+                </section class="description">
             </div>
             <div class="menu-item">
                 <h5>Game Hen</h5>
-                <section>
+                <section class="description">
                     <p>with vegetable gnocchis</p>
-                    <p>44€</p>
+                    <p class="price">44€</p>
                 </section>
             </div>
             <p>DESSERTS</p>
             <div class="menu-item">
                 <h5>Floral Ice Cream</h5>
-                <section>
+                <section class="description">
                     <p>with hazelnut butter</p>
-                    <p>18€</p>
+                    <p class="price">18€</p>
                 </section>
             </div>
             <div class="menu-item">
                 <h5>Chocolate Lava Cake</h5>
-                <section>
+                <section class="description">
                     <p>Revisited</p>
-                    <p>22€</p>
+                    <p class="price">22€</p>
                 </section>
             </div>
             <div class="menu-item">
                 <h5>Napolean</h5>
-                <section>
+                <section class="description">
                     <p>with blueberries and marzipan</p>
-                    <p>23€</p>
+                    <p class="price">23€</p>
                 </section>
             </div>
             <button class="order">order</button>
@@ -88,7 +101,7 @@
         <div class="footer">
             <h6>ohmyfood</h6>
             <a href="#"><i class="fas fa-utensils"></i>Suggest a restaurant</a>
-            <a href="#"><i class="fas fa-hands-helping"></i>Become a partner</a>
+            <a href="#"><i class="fas fa-hands-helping fa-xs"></i>Become a partner</a>
             <a class="legal" href="#">Legal</a>
             <a class="contact" href="#">Contact</a>
         </div>
