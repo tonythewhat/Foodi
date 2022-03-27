@@ -1,25 +1,87 @@
+//Google $font-stack
+// @import url(http://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap);
+// @import url(http://fonts.googleapis.com/css2?family=Shrikhand&display=swap);
+// Font Variables
+$title: shrikhand;
+$text: roboto;
+//variables
+$colors:( primary: #9356DC, secondary: #FF79DA, tertiary: #99E2D0);
+// Styles
+body {
+    font-family: $text;
+    font-weight: normal;
+}
+
+.page-wrapper {
+    width: 320px;
+}
+
 .logo {
     width: 125px;
     padding-left: 49px;
     height: 20px;
     border-radius: 0px;
+    margin: 0px;
 }
 
 .image {
-    margin: 20px;
+    margin-left: 20px;
+}
+
+h2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: $title;
+}
+
+h4 {
+    border-bottom: solid #99E2D0 3px;
+    padding-bottom: 12px;
+    width: 42px;
+    font-weight: 400;
+    font-family: $text;
+}
+
+.price {
+    font-weight: 700;
 }
 
 .menu-wrapper {
     background-color: #e2e2e2;
+    margin-top: -15px;
+    padding: 20px;
+    border-radius: 20px;
+    width: 275px;
+    position: relative;
+    z-index: 1;
+}
+
+#heart {
+    size: 20px;
+    color: red;
+    background-color: red;
+    text-decoration-color: #FF79DA;
+    width: 100px;
+    stroke: var(#9356DC);
+    fill: var(#FF79DA);
+    stroke-dasharray: 54;
+    stroke-dashoffset: 54;
+    width: 50px;
 }
 
 h5 {
-    margin: 5px;
+    margin: 3px;
+    font-weight: 900;
+    font-family: $text;
+    font-size: 16px;
+    padding: 8px 10px 0px;
 }
 
 .menu-item {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     border: none;
     border-radius: 20px;
     width: 300px;
@@ -27,6 +89,7 @@ h5 {
     box-shadow: 0 3px 10px 2px rgba( 0, 0, 0, 0.1);
     background-color: white;
     gap: 10px;
+    margin: 10px -10px;
 }
 
 .description {
@@ -34,11 +97,35 @@ h5 {
     flex-direction: row;
     justify-content: space-between;
     margin: -15px 10px;
+    font-size: 13px;
+    padding: 20px 5px;
+}
+
+.food-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 img {
-    width: 250px;
+    width: 312px;
     height: 250px;
+    margin-left: -20px;
+}
+
+.check {
+    visibility: hidden;
+    color: white;
+    width: 0px;
+    z-index: -1;
+}
+
+.check:active {
+    width: 30px;
+    background-color: #99E2D0;
+    color: white;
+    padding: 22px 14px;
+    border-radius: 0px 20px 20px 0px;
 }
 
 .suggest {
