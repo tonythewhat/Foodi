@@ -55,18 +55,36 @@ h4 {
   z-index: 1;
 }
 
-#heart {
+.heart {
+  position: absolute;
+  left: 270px;
+  top: 46px;
+  right: 0;
   size: 20px;
-  color: red;
-  background-color: red;
-  -webkit-text-decoration-color: #FF79DA;
-          text-decoration-color: #FF79DA;
-  width: 100px;
-  stroke: var(#9356DC);
-  fill: var(#FF79DA);
-  stroke-dasharray: 54;
-  stroke-dashoffset: 54;
-  width: 50px;
+}
+
+.solid-heart {
+  position: absolute;
+  left: 270px;
+  top: 46px;
+  right: 0;
+  cursor: pointer;
+  z-index: 1;
+  opacity: 0;
+  -webkit-transition: opacity;
+  transition: opacity;
+}
+
+.solid-heart:hover {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 100%;
+  -webkit-transition: background-image;
+  transition: background-image;
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  background-image: linear-gradient(#9356DC, #FF79DA);
 }
 
 h5 {
@@ -97,6 +115,13 @@ h5 {
   background-color: white;
   gap: 10px;
   margin: 10px -10px;
+  position: relative;
+  -webkit-animation: food-card;
+          animation: food-card;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .description {
@@ -126,6 +151,24 @@ h5 {
   width: 100%;
 }
 
+@-webkit-keyframes food-card {
+  0% {
+    bottom: -200px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+@keyframes food-card {
+  0% {
+    bottom: -200px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
 img {
   width: 312px;
   height: 250px;
@@ -135,16 +178,44 @@ img {
 .check {
   visibility: hidden;
   color: white;
+  background-color: red;
   width: 0px;
-  z-index: -1;
+  padding: 22px 14px;
+  border-radius: 0px 20px 20px 0px;
+  z-index: 1;
 }
 
-.check:active {
+.menu-item:hover .check {
   width: 30px;
   background-color: #99E2D0;
   color: white;
+  visibility: visible;
+  -webkit-transform: translateX(-30px);
+          transform: translateX(-30px);
+  -webkit-transition: 3s;
+  transition: 3s;
   padding: 22px 14px;
   border-radius: 0px 20px 20px 0px;
+  -webkit-animation: check-slide 3s ease-in left;
+          animation: check-slide 3s ease-in left;
+}
+
+@-webkit-keyframes check-slide {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 30px;
+  }
+}
+
+@keyframes check-slide {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 30px;
+  }
 }
 
 .suggest {
