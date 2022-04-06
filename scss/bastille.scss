@@ -1,12 +1,23 @@
-//Google $font-stack
-// @import url(http://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap);
-// @import url(http://fonts.googleapis.com/css2?family=Shrikhand&display=swap);
-// Font Variables
+/*Google $font-stack*/
+
+
+/* @import url(http://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap)*/
+
+
+/* @import url(http://fonts.googleapis.com/css2?family=Shrikhand&display=swap)*/
+
+
+/* Font Variables*/
+
 $title: shrikhand;
 $text: roboto;
-//variables
+
+/*variables*/
+
 $colors:( primary: #9356DC, secondary: #FF79DA, tertiary: #99E2D0);
-// Styles
+
+/* Styles*/
+
 body {
     font-family: $text;
     font-weight: normal;
@@ -36,17 +47,11 @@ h2 {
 }
 
 h4 {
+    border-bottom: solid #99E2D0 3px;
     padding-bottom: 12px;
-    width: 90px;
+    width: 42px;
     font-weight: 400;
     font-family: $text;
-}
-
-.course {
-    height: 15px;
-    background-color: red;
-    border-bottom: 3px #99E2D0 solid;
-    width: 42px;
 }
 
 .price {
@@ -57,24 +62,40 @@ h4 {
     background-color: #e2e2e2;
     margin-top: -15px;
     padding: 20px;
-    border-radius: 20px;
+    border-radius: 20px 20px 0 0;
     width: 275px;
     position: relative;
     z-index: 1;
 }
 
-// #heart {
-//     size: 20px;
-//     color: red;
-//     background-color: red;
-//     text-decoration-color: #FF79DA;
-//     width: 100px;
-//     stroke: var(#9356DC);
-//     fill: var(#FF79DA);
-//     stroke-dasharray: 54;
-//     stroke-dashoffset: 54;
-//     width: 50px;
-// }
+.heart {
+    position: absolute;
+    left: 270px;
+    top: 46px;
+    right: 0;
+    size: 20px;
+}
+
+.solid-heart {
+    position: absolute;
+    left: 270px;
+    top: 46px;
+    right: 0;
+    cursor: pointer;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity;
+}
+
+.solid-heart:hover {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 100%;
+    transition: background-image;
+    transition-duration: 2s;
+    background-image: linear-gradient(#9356DC, #FF79DA);
+}
+
 h5 {
     margin: 3px;
     font-weight: 900;
@@ -95,6 +116,10 @@ h5 {
     background-color: white;
     gap: 10px;
     margin: 10px -10px;
+    position: relative;
+    animation: food-card;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
 }
 
 .description {
@@ -103,13 +128,23 @@ h5 {
     justify-content: space-between;
     margin: -15px 10px;
     font-size: 13px;
-    padding: 20px 5px;
+    padding: 5px;
 }
 
 .food-wrapper {
     display: flex;
     flex-direction: column;
     width: 100%;
+    text-overflow: ellipsis;
+}
+
+@keyframes food-card {
+    0% {
+        bottom: -200px;
+    }
+    100% {
+        bottom: 0;
+    }
 }
 
 img {
@@ -122,32 +157,50 @@ img {
     visibility: hidden;
     color: white;
     width: 0px;
-    z-index: -1;
+    position: relative;
+    right: 0px;
+    padding: 20px 14px;
+    border-radius: 0px 20px 20px 0px;
+    z-index: 1;
 }
 
-.check:active {
+.menu-item:hover .check {
     width: 30px;
     background-color: #99E2D0;
     color: white;
+    visibility: visible;
+    z-index: 1;
+    transform: translateX(-30px);
+    transition: 3s;
     padding: 22px 14px;
     border-radius: 0px 20px 20px 0px;
+    margin-right: -30px;
+    margin-left: 6px;
 }
 
 .order {
-    border-radius: 20px;
-    color: white;
+    border-radius: 18px;
     background: linear-gradient(#FF79DA, #9356DC);
-    margin: 10px 100px;
-    width: 140px;
+    width: 135px;
+    height: 35px;
+    color: white;
+    padding: 10px 26px;
+    font-size: 12px;
+    align-self: center;
     border: none;
-    height: 38px;
-    box-shadow: 0 3px 10px 2px rgba( 0, 0, 0, 0.1);
+    box-shadow: 0 1px 1px 1px rgba( 0, 0, 0, 0.1);
+    margin: 50px;
+    position: relative;
+    bottom: 10px;
+    left: 20px;
 }
 
 h3 {
     font-family: $title;
     color: white;
     margin-top: 0px;
+    font-size: 15px;
+    font-weight: unset;
 }
 
 .suggest {
