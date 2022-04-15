@@ -9,20 +9,32 @@ body {
   font-weight: normal;
 }
 
+@media (min-width: 760px) {
+  .meal-class {
+    width: 30%;
+  }
+}
+
 .page-wrapper {
-  width: 320px;
+  width: 100%;
 }
 
 .logo {
-  width: 125px;
-  padding-left: 49px;
-  height: 20px;
+  width: 70%;
+  padding-left: 17%;
+  height: 30%;
   border-radius: 0px;
   margin: 0px;
 }
 
 .image {
   margin-left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 h2 {
@@ -37,14 +49,19 @@ h2 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   font-family: shrikhand;
+  width: 100%;
 }
 
 h4 {
-  border-bottom: solid #99E2D0 3px;
-  padding-bottom: 12px;
-  width: 42px;
   font-weight: 400;
   font-family: roboto;
+}
+
+.line {
+  height: 5px;
+  width: 40px;
+  background-color: #99E2D0;
+  margin: 10px 0px;
 }
 
 .price {
@@ -56,11 +73,24 @@ h4 {
   margin-top: -15px;
   padding: 20px;
   border-radius: 20px 20px 0 0;
-  width: 275px;
   position: relative;
   z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
+/*.meal-class {
+    width: 90%;
+}*/
 .heart {
   position: absolute;
   left: 270px;
@@ -114,7 +144,6 @@ h5 {
           justify-content: space-between;
   border: none;
   border-radius: 20px;
-  width: 300px;
   height: 75px;
   -webkit-box-shadow: 0 3px 10px 2px rgba(0, 0, 0, 0.1);
           box-shadow: 0 3px 10px 2px rgba(0, 0, 0, 0.1);
@@ -268,10 +297,12 @@ h3 {
 
 i.fa-utensils {
   color: white;
+  margin-right: 15px;
 }
 
 i.fa-hands-helping {
   color: white;
+  margin-right: 15px;
 }
 
 .footer {
