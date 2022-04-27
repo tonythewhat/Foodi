@@ -1,7 +1,5 @@
-readme
-ohmyfood is a website based on Parisian cuisine in the New York area
 <div align="center" id="top"> 
-
+  ![Image](assets/ohmyfood.png)
 
   &#xa0;
 
@@ -11,13 +9,13 @@ ohmyfood is a website based on Parisian cuisine in the New York area
 <h1 align="center">Foodi</h1>
 
 <p align="center">
-  <!-- <img alt="Github top language" src="https://img.shields.io/github/languages/top/tonythewhat/foodi?color=56BEB8">
+  <img alt="Github top language" src="https://img.shields.io/github/languages/top/tonythewhat/foodi?color=56BEB8">
 
   <img alt="Github language count" src="https://img.shields.io/github/languages/count/tonythewhat/foodi?color=56BEB8">
 
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/tonythewhat/foodi?color=56BEB8">
 
-  <img alt="License" src="https://img.shields.io/github/license/tonythewhat/foodi?color=56BEB8"> -->
+  <img alt="License" src="https://img.shields.io/github/license/tonythewhat/foodi?color=56BEB8">
 
   <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/tonythewhat/foodi?color=56BEB8" /> -->
 
@@ -28,11 +26,11 @@ ohmyfood is a website based on Parisian cuisine in the New York area
 
 <!-- Status -->
 
-<!-- <h4 align="center"> 
+<h4 align="center"> 
 	🚧  Foodi 🚀 Under construction...  🚧
 </h4> 
 
-<hr> -->
+<hr>
 
 <p align="center">
   <a href="#dart-about">About</a> &#xa0; | &#xa0; 
@@ -46,8 +44,51 @@ ohmyfood is a website based on Parisian cuisine in the New York area
 
 <br>
 
+## About 
+
 Mobile site ohmyfood is a website based on Parisian cuisine in the New York area. Users are able to search for French cuisine in New York area, look at the menu of the restaurants, add dishes to their cart, order, and even mark which restaurants they really liked. At the moment there are only four restaurants accessible.
-<a href="https://github.com/tonythewhat/foodi">Clone this project</a>
+
+## Features 
+
+:heavy_check_mark: Feature 1;\
+:heavy_check_mark: Feature 2;\
+:heavy_check_mark: Feature 3;
+
+## Technologies 
+
+The following tools were used in this project:
+
+- [Expo](https://expo.io/)
+- [Node.js](https://nodejs.org/en/)
+- [React](https://pt-br.reactjs.org/)
+- [React Native](https://reactnative.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+
+## :white_check_mark: Requirements 
+
+Before starting, you need to have [Git](https://git-scm.com) installed.
+
+## Starting 
+
+```bash
+# Clone this project
+[git clone] (https://github.com/tonythewhat/foodi)
+
+# Access
+$ cd foodi
+
+# Install dependencies
+$ yarn
+
+# Run the project
+$ yarn start
+
+# The server will initialize in the <http://localhost:3000>
+```
+
+## :memo: License ##
+
+This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
 
 
 Made by <a href="https://github.com/tonythewhat" target="_blank">Anthony Page</a>
