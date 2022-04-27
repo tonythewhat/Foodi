@@ -24,6 +24,12 @@ $colors:( primary: #9356DC, secondary: #FF79DA, tertiary: #99E2D0);
     }
 }
 
+@media (max-width: 760px) {
+    .meal-class {
+        width: 90%;
+    }
+}
+
 body {
     font-family: $text;
     font-weight: normal;
@@ -205,6 +211,12 @@ h5 {
     animation: food-card;
     animation-duration: 5s;
     animation-fill-mode: forwards;
+    animation-delay: 2s;
+    @for $i from 1 through 9 {
+        &:nth-child(#{$i}n) {
+            animation-delay: #{$i * 0.5}s;
+        }
+    }
 }
 
 .description {
@@ -276,7 +288,6 @@ img {
     margin: 50px;
     position: relative;
     bottom: 10px;
-    left: 20px;
 }
 
 h3 {
