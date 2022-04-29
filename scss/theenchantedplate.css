@@ -16,6 +16,7 @@
   }
 }
 
+html,
 body {
   font-family: roboto;
   font-weight: normal;
@@ -298,6 +299,11 @@ h5 {
 .menu-item:nth-child(9n) {
   -webkit-animation-delay: 4.5s;
           animation-delay: 4.5s;
+}
+
+.menu-item:nth-child(10n) {
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
 }
 
 .description {

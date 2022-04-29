@@ -30,6 +30,7 @@ $colors:( primary: #9356DC, secondary: #FF79DA, tertiary: #99E2D0);
     }
 }
 
+html,
 body {
     font-family: $text;
     font-weight: normal;
@@ -212,8 +213,8 @@ h5 {
     animation-duration: 5s;
     animation-fill-mode: forwards;
     animation-delay: 2s;
-    @for $i from 1 through 9 {
-        &:nth-child(#{$i}n) {
+    @for $i from 1 through 10 {
+        &:nth-child( #{$i}n) {
             animation-delay: #{$i * 0.5}s;
         }
     }
