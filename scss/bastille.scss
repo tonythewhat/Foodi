@@ -7,14 +7,9 @@
 /* @import url(http://fonts.googleapis.com/css2?family=Shrikhand&display=swap)*/
 
 
-/* Font Variables*/
-
-$title: shrikhand;
-$text: roboto;
-
 /*variables*/
 
-$colors:( primary: #9356DC, secondary: #FF79DA, tertiary: #99E2D0);
+@import "./utils/variables";
 
 /* Styles*/
 
@@ -185,7 +180,7 @@ h4 {
     opacity: 100%;
     transition: background-image;
     transition-duration: 2s;
-    background-image: linear-gradient(#9356DC, #FF79DA);
+    background-image: linear-gradient($colors-primary, $colors-secondary);
 }
 
 h5 {

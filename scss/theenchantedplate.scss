@@ -6,19 +6,20 @@
 
 /* @import url(http://fonts.googleapis.com/css2?family=Shrikhand&display=swap)*/
 
+@import "./utils/variables";
+@import"./layouts/form";
+@mixin card-shadow($shadow) {
+    box-shadow: 0 3px 10px 2px rgba( 0, 0, 0, 0.1);
+}
 
-/* Font Variables*/
-
-$title: shrikhand;
-$text: roboto;
-
-/*variables*/
-
-$colors:( primary: #9356DC, secondary: #FF79DA, tertiary: #99E2D0);
 
 /* Styles*/
 
 @media (min-width: 760px) {
+    img {
+        width: 70%;
+        height: 50%;
+    }
     .meal-class {
         width: 30%;
     }
@@ -40,7 +41,7 @@ body {
     width: 100vw;
     height: 100vh;
     background-color: white;
-    animation: full-load 1s linear 3s 1 normal backwards;
+    animation: full-load 1s linear 2s 1 normal backwards;
 }
 
 @keyframes full-load {
@@ -63,8 +64,8 @@ body {
     border: 16px solid #f3f3f3;
     border-radius: 50%;
     border-top: 16px solid #3298db;
-    -webkit-animation: spin 4s linear forwards;
-    animation: spin 3s linear forwards;
+    -webkit-animation: spin 2s linear forwards;
+    animation: spin 2s linear forwards;
 }
 
 @-webkit-keyframes spin {
@@ -93,7 +94,7 @@ body {
     width: 100%;
     position: absolute;
     top: 0;
-    animation: loaded 1s linear 3s 1 normal backwards;
+    animation: loaded 1s linear 2s 1 normal backwards;
 }
 
 @keyframes loaded {
@@ -114,18 +115,13 @@ body {
 }
 
 .image {
-    margin-left: 20px;
     display: flex;
     justify-content: center
 }
 
-h2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    font-family: $title;
-    font-size: 22px;
-    width: 100%;
+img {
+    width: 312px;
+    height: 250px;
 }
 
 h4 {
@@ -147,48 +143,51 @@ h4 {
     font-weight: 700;
 }
 
-.menu-wrapper {
-    background-color: #e2e2e2;
-    margin-top: -15px;
-    padding: 20px;
-    border-radius: 20px 20px 0 0;
-    // width: 275px;
-    position: relative;
-    z-index: 1;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.heart {
-    position: absolute;
-    left: 270px;
-    top: 46px;
-    right: 0;
-    size: 20px;
-}
-
-.solid-heart {
-    position: absolute;
-    left: 270px;
-    top: 46px;
-    right: 0;
-    cursor: pointer;
-    z-index: 1;
-    opacity: 0;
-    transition: opacity;
-}
-
-.solid-heart:hover {
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    opacity: 100%;
-    transition: background-image;
-    transition-duration: 2s;
-    background-image: linear-gradient(#9356DC, #FF79DA);
-}
-
+// .menu-wrapper {
+//     background-color: #e2e2e2;
+//     margin-top: -15px;
+//     padding: 20px;
+//     border-radius: 20px 20px 0 0;
+//     // width: 275px;
+//     position: relative;
+//     z-index: 1;
+//     display: flex;
+//     flex-direction: row;
+//     flex-wrap: wrap;
+//     justify-content: space-around;
+//     &h2 {
+//         display: flex;
+//         flex-direction: row;
+//         justify-content: space-between;
+//         font-family: $title;
+//         font-size: 22px;
+//         width: 100%;
+//     }
+//     &.heart {
+//         position: absolute;
+//         top: 46px;
+//         right: 30px;
+//         size: 20px;
+//     }
+//     &.solid-heart {
+//         position: absolute;
+//         // left: 270px;
+//         top: 46px;
+//         right: 30px;
+//         cursor: pointer;
+//         z-index: 1;
+//         opacity: 0;
+//         transition: opacity;
+//     }
+// }
+// .solid-heart:hover {
+//     -webkit-background-clip: text;
+//     -webkit-text-fill-color: transparent;
+//     opacity: 100%;
+//     transition: background-image;
+//     transition-duration: 2s;
+//     background-image: linear-gradient($colors-primary, #FF79DA);
+// }
 h5 {
     margin: 3px;
     font-weight: 900;
@@ -197,68 +196,58 @@ h5 {
     padding: 8px 10px 0px;
 }
 
-.menu-item {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    border: none;
-    border-radius: 20px;
-    height: 75px;
-    box-shadow: 0 3px 10px 2px rgba( 0, 0, 0, 0.1);
-    background-color: white;
-    gap: 10px;
-    margin: 10px -10px;
-    position: relative;
-    animation: food-card;
-    animation-duration: 5s;
-    animation-fill-mode: forwards;
-    animation-delay: 2s;
-    @for $i from 1 through 10 {
-        &:nth-child( #{$i}n) {
-            animation-delay: #{$i * 0.5}s;
-        }
-    }
-}
-
-.description {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: -15px 10px;
-    font-size: 13px;
-    padding: 5px;
-}
-
-.food-wrapper {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
+// .menu-item {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-between;
+//     border: none;
+//     border-radius: 20px;
+//     height: 75px;
+//     box-shadow: $shadow;
+//     background-color: white;
+//     gap: 10px;
+//     margin: 10px -10px;
+//     position: relative;
+//     animation: food-card;
+//     animation-duration: 5s;
+//     animation-fill-mode: forwards;
+//     animation-delay: 2s;
+//     @for $i from 1 through 10 {
+//         &:nth-child( #{$i}n) {
+//             animation-delay: #{$i * 0.5}s;
+//         }
+//     }
+//     &.description {
+//         display: flex;
+//         flex-direction: row;
+//         justify-content: space-between;
+//         margin: -15px 10px;
+//         font-size: 13px;
+//         padding: 5px;
+//     }
+//     &.food-wrapper {
+//         display: flex;
+//         flex-direction: column;
+//         width: 100%;
+//     }
+//     &.check {
+//         visibility: hidden;
+//         color: white;
+//         width: 0px;
+//         position: relative;
+//         right: 0px;
+//         padding: 20px 14px;
+//         border-radius: 0px 20px 20px 0px;
+//         z-index: 1;
+//     }
+// }
 @keyframes food-card {
     0% {
-        bottom: -200px;
+        bottom: -100px;
     }
     100% {
         bottom: 0;
     }
-}
-
-img {
-    width: 312px;
-    height: 250px;
-    margin-left: -20px;
-}
-
-.check {
-    visibility: hidden;
-    color: white;
-    width: 0px;
-    position: relative;
-    right: 0px;
-    padding: 20px 14px;
-    border-radius: 0px 20px 20px 0px;
-    z-index: 1;
 }
 
 .menu-item:hover .check {
@@ -268,7 +257,7 @@ img {
     visibility: visible;
     z-index: 1;
     transform: translateX(-30px);
-    transition: 3s;
+    transition: 2s;
     padding: 22px 14px;
     border-radius: 0px 20px 20px 0px;
     margin-right: -30px;
@@ -277,7 +266,7 @@ img {
 
 .order {
     border-radius: 18px;
-    background: linear-gradient(#FF79DA, #9356DC);
+    background: linear-gradient($colors-primary, $colors-secondary);
     width: 135px;
     height: 35px;
     color: white;
@@ -285,7 +274,7 @@ img {
     font-size: 12px;
     align-self: center;
     border: none;
-    box-shadow: 0 1px 1px 1px rgba( 0, 0, 0, 0.1);
+    box-shadow: $shadow;
     margin: 50px;
     position: relative;
     bottom: 10px;

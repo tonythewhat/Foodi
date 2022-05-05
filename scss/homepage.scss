@@ -7,14 +7,9 @@
 /* @import url(http://fonts.googleapis.com/css2?family=Shrikhand&display=swap)*/
 
 
-/* Font Variables*/
-
-$title: shrikhand;
-$text: roboto;
-
 /*variables*/
 
-$colors:( primary: #9356DC, secondary: #FF79DA, tertiary: #99E2D0);
+@import "./utils/variables";
 
 /* Styles*/
 
@@ -257,14 +252,14 @@ h2 {
     border: none;
     color: rgb(255, 255, 255);
     text-align: center;
-    background-color: #9356DC;
+    background-color: $colors-primary;
     margin: 37px 3px;
     z-index: 1;
 }
 
 .btn-restaurants {
     border-radius: 18px;
-    background: linear-gradient(#FF79DA, #9356DC);
+    background: linear-gradient(#FF79DA, $colors-primary);
     // width: 125px;
     height: 16px;
     color: white;
@@ -311,7 +306,7 @@ h2 {
 }
 
 .store {
-    color: #9356DC;
+    color: $colors-primary;
 }
 
 img {
@@ -402,7 +397,7 @@ h5 {
     opacity: 100%;
     transition: background-image;
     transition-duration: 2s;
-    background-image: linear-gradient(#9356DC, #FF79DA);
+    background-image: linear-gradient($colors-primary, #FF79DA);
 }
 
 h3 {
