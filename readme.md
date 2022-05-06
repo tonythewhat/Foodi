@@ -15,12 +15,6 @@
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/tonythewhat/foodi?color=56BEB8">
 
   <img alt="License" src="https://img.shields.io/github/license/tonythewhat/foodi?color=56BEB8">
-
-  <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/tonythewhat/foodi?color=56BEB8" /> -->
-
-  <!-- <img alt="Github forks" src="https://img.shields.io/github/forks/tonythewhat/foodi?color=56BEB8" /> -->
-
-  <!-- <img alt="Github stars" src="https://img.shields.io/github/stars/tonythewhat/foodi?color=56BEB8" /> -->
 </p>
 
 <!-- Status -->
@@ -61,6 +55,7 @@ The following tools were used in this project:
 Before starting, you need to have [Git](https://git-scm.com) installed.
 
 # Starting 
+[ohmyfood](https://moonlit-yeot-0639e7.netlify.app/legourmand.html)
 
 
 ## Clone this project
