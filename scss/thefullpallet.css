@@ -197,7 +197,6 @@ h4 {
 
 .heart {
     position: absolute;
-    left: 270px;
     top: 46px;
     right: 0;
     size: 20px;
@@ -205,7 +204,6 @@ h4 {
 
 .solid-heart {
     position: absolute;
-    left: 270px;
     top: 46px;
     right: 0;
     cursor: pointer;
