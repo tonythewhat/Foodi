@@ -6,14 +6,13 @@
 
 /* @import url(http://fonts.googleapis.com/css2?family=Shrikhand&display=swap)*/
 
-@import url("/utils/variables");
-@import url("/layout/_form.scss");
-// @import "./utils/variables";
-// @import"./layouts/form";
 @mixin card-shadow($shadow) {
     box-shadow: 0 3px 10px 2px rgba( 0, 0, 0, 0.1);
 }
 
+$title: shrikhand;
+$text: roboto;
+$colors:( primary: #9356DC, secondary: #FF79DA, tertiary: #99E2D0);
 
 /* Styles*/
 
@@ -44,6 +43,101 @@ body {
     height: 100vh;
     background-color: white;
     animation: full-load 1s linear 2s 1 normal backwards;
+}
+
+.menu-wrapper {
+    background-color: #e2e2e2;
+    margin-top: -15px;
+    padding: 20px;
+    border-radius: 20px 20px 0 0;
+    // width: 275px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    &h2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-family: $title;
+        font-size: 22px;
+        width: 100%;
+        &.heart {
+            position: absolute;
+            top: 46px;
+            right: 30px;
+            size: 20px;
+        }
+        &.solid-heart {
+            position: absolute;
+            // left: 270px;
+            top: 46px;
+            right: 30px;
+            cursor: pointer;
+            z-index: 1;
+            opacity: 0;
+            transition: opacity;
+            &:hover,
+            &:active,
+            &:focus {
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                opacity: 100%;
+                transition: background-image;
+                transition-duration: 2s;
+                background-image: linear-gradient($colors-primary, $colors-secondary);
+            }
+        }
+    }
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: none;
+    border-radius: 20px;
+    height: 75px;
+    box-shadow: $shadow;
+    background-color: white;
+    gap: 10px;
+    margin: 10px -10px;
+    position: relative;
+    animation: food-card;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+    @for $i from 1 through 10 {
+        &:nth-child( #{$i}n) {
+            animation-delay: #{$i * 0.5}s;
+        }
+    }
+    &.food-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        &.description {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: -15px 10px;
+            font-size: 13px;
+            padding: 5px;
+        }
+    }
+    &.check {
+        visibility: hidden;
+        color: white;
+        width: 0px;
+        position: relative;
+        right: 0px;
+        padding: 20px 14px;
+        border-radius: 0px 20px 20px 0px;
+        z-index: 1;
+    }
 }
 
 @keyframes full-load {

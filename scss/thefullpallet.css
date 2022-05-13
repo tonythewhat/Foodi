@@ -213,8 +213,9 @@ h4 {
     transition: opacity;
 }
 
-.solid-heart:active {
+.solid-heart:hover {
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     opacity: 100%;
     -webkit-transition: background-image;
@@ -369,7 +370,7 @@ img {
     z-index: 1;
 }
 
-.menu-item:active .check {
+.menu-item:hover .check {
     width: 30px;
     background-color: #99E2D0;
     color: white;

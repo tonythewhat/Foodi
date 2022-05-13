@@ -36,11 +36,12 @@
             &:active,
             &:focus {
                 -webkit-background-clip: text;
+                background-clip: text;
                 -webkit-text-fill-color: transparent;
                 opacity: 100%;
                 transition: background-image;
                 transition-duration: 2s;
-                background-image: linear-gradient($colors-primary, #FF79DA);
+                background-image: linear-gradient($colors-primary, $colors-secondary);
             }
         }
     }

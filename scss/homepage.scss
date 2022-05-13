@@ -9,7 +9,9 @@
 
 /*variables*/
 
-@import "./utils/variables";
+$title: shrikhand;
+$text: roboto;
+$colors:( primary: #9356DC, secondary: #FF79DA, tertiary: #99E2D0);
 
 /* Styles*/
 
@@ -20,21 +22,9 @@ body {
 }
 
 @media (min-width: 760px) {
-    // body {
-    //     width: 700px;
-    // }
-    .page-wrapper {
-        // width: 700px;
-    }
-    .location-wrapper {
-        // width: 700px;
-    }
-    .explore-wrapper {
-        // width: 712px;
-    }
     h2 {
         display: flex;
-        justify-content: center;
+        justify-content: right;
         width: 100%;
     }
     .guide {
@@ -70,18 +60,6 @@ body {
 }
 
 @media (min-width: 1020px) {
-    /* body {
-        width: 700px;
-    }*/
-    .page-wrapper {
-        // width: 700px;
-    }
-    .location-wrapper {
-        // width: 700px;
-    }
-    .explore-wrapper {
-        // width: 712px;
-    }
     h2 {
         display: flex;
         justify-content: center;
@@ -181,6 +159,7 @@ body {
     position: absolute;
     top: 0;
     animation: loaded 1s linear 3s 1 normal backwards;
+    background-color: blue;
 }
 
 @keyframes loaded {
@@ -274,6 +253,7 @@ h2 {
 .works_wrapper {
     display: flex;
     flex-direction: column;
+    padding-left: 10px;
 }
 
 .guide {
@@ -393,6 +373,7 @@ h5 {
 
 .solid-heart:hover {
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     opacity: 100%;
     transition: background-image;
@@ -442,5 +423,5 @@ i.fa-hands-helping {
 
 a:link {
     text-decoration: none;
-    color: white;
+    color: rgb(0, 38, 255);
 }
