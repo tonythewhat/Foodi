@@ -18,6 +18,14 @@ body {
   font-weight: normal;
 }
 
+.loading-page {
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  -webkit-animation: full-load 1s linear 2s 1 normal backwards;
+          animation: full-load 1s linear 2s 1 normal backwards;
+}
+
 .menu-wrapper {
   background-color: #e2e2e2;
   margin-top: -15px;
@@ -30,7 +38,7 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
 }
-.menu-wrapper > h2 {
+.menu-wrapper h2 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -38,13 +46,13 @@ body {
   font-size: 22px;
   width: 100%;
 }
-.menu-wrapper > h2 > .heart {
+.menu-wrapper h2 .heart {
   position: absolute;
   top: 46px;
   right: 30px;
   size: 20px;
 }
-.menu-wrapper > h2 > .solid-heart {
+.menu-wrapper h2 .solid-heart {
   position: absolute;
   top: 46px;
   right: 30px;
@@ -53,7 +61,7 @@ body {
   opacity: 0;
   transition: opacity;
 }
-.menu-wrapper > h2 > .solid-heart > :hover, .menu-wrapper > h2 > .solid-heart > :active, .menu-wrapper > h2 > .solid-heart > :focus {
+.menu-wrapper h2 .solid-heart:hover, .menu-wrapper h2 .solid-heart:active, .menu-wrapper h2 .solid-heart:focus {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -124,12 +132,12 @@ body {
   -webkit-animation-delay: 5s;
           animation-delay: 5s;
 }
-.menu-item > .food-wrapper {
+.menu-item .food-wrapper {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
-.menu-item > .food-wrapper > .description {
+.menu-item .food-wrapper .description {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -137,7 +145,7 @@ body {
   font-size: 13px;
   padding: 5px;
 }
-.menu-item > .check {
+.menu-item .check {
   visibility: hidden;
   color: white;
   width: 0px;
@@ -146,14 +154,6 @@ body {
   padding: 20px 14px;
   border-radius: 0px 20px 20px 0px;
   z-index: 1;
-}
-
-.loading-page {
-  width: 100vw;
-  height: 100vh;
-  background-color: white;
-  -webkit-animation: full-load 1s linear 2s 1 normal backwards;
-          animation: full-load 1s linear 2s 1 normal backwards;
 }
 
 @-webkit-keyframes full-load {
@@ -248,8 +248,10 @@ body {
 }
 
 img {
-  max-width: 99%;
-  height: 100%;
+  width: 99%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 h4 {
