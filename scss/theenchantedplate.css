@@ -50,7 +50,6 @@ body {
   position: absolute;
   top: 46px;
   right: 30px;
-  size: 20px;
 }
 .menu-wrapper h2 .solid-heart {
   position: absolute;
@@ -215,7 +214,6 @@ body {
   -webkit-animation: loaded 1s linear 2s 1 normal backwards;
           animation: loaded 1s linear 2s 1 normal backwards;
   overflow-x: hidden;
-  background-color: red;
 }
 
 @-webkit-keyframes loaded {
@@ -241,6 +239,8 @@ body {
   height: 30%;
   border-radius: 0px;
   margin: 0px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .image {

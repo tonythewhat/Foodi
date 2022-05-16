@@ -67,7 +67,6 @@ body {
             position: absolute;
             top: 46px;
             right: 30px;
-            size: 20px;
         }
         .solid-heart {
             position: absolute;
@@ -191,7 +190,6 @@ body {
     top: 0;
     animation: loaded 1s linear 2s 1 normal backwards;
     overflow-x: hidden;
-    background-color: red;
 }
 
 @keyframes loaded {
@@ -209,6 +207,7 @@ body {
     height: 30%;
     border-radius: 0px;
     margin: 0px;
+    object-fit: contain;
 }
 
 .image {
