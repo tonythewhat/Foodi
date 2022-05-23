@@ -11,21 +11,31 @@
 
 $title: shrikhand;
 $text: roboto;
-$colors:( primary: #9356DC, secondary: #FF79DA, tertiary: #99E2D0);
+$colors-primary: #9356DC;
+$colors-secondary: #FF79DA;
+$colors-tertiary: #99E2D0;
+$shadow: 0 3px 10px 2px rgba(0, 0, 0, 0.1);
 
 /* Styles*/
 
+html,
 body {
     font-family: $text;
     font-weight: normal;
-    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 @media (min-width: 760px) {
     h2 {
         display: flex;
-        justify-content: right;
+        justify-content: center;
         width: 100%;
+        padding-left: 20px;
     }
     .guide {
         display: flex;
@@ -159,7 +169,6 @@ body {
     position: absolute;
     top: 0;
     animation: loaded 1s linear 2s 1 normal backwards;
-    background-color: blue;
 }
 
 @keyframes loaded {
@@ -196,6 +205,7 @@ header {
     // width: 300px;
     gap: 12px;
     font-size: 13px;
+    font-weight: 700;
 }
 
 .explore-wrapper {
@@ -213,6 +223,11 @@ h2 {
     font-weight: 700;
 }
 
+.restaurant-header {
+    padding-left: 20px;
+    padding-top: 40px;
+}
+
 .book {
     align-self: center;
 }
@@ -221,6 +236,7 @@ h2 {
     align-self: center;
     text-align: center;
     font-weight: 300;
+    font-size: 17px;
 }
 
 .circle {
@@ -276,6 +292,9 @@ h2 {
     gap: 15px;
     width: 230px;
     height: 40px;
+    &-enjoy {
+        background-color: #f1dff5;
+    }
 }
 
 .mobile {
@@ -294,17 +313,17 @@ img {
     height: 130px;
     width: 100%;
     object-fit: cover;
-    border-radius: 20px 20px 0px 0px;
+    border-radius: 10px 10px 0px 0px;
 }
 
-h4 {
-    margin: 6px;
+span {
+    margin: 6px 8px;
     font-weight: 700;
     color: #000;
 }
 
-h5 {
-    margin: 2px 8px;
+p {
+    margin: 0px 8px 10px;
     color: #000;
 }
 
@@ -313,7 +332,7 @@ h5 {
     display: flex;
     flex-direction: column;
     border: none;
-    border-radius: 20px;
+    border-radius: 10px;
     box-shadow: 0 1px 1px 1px rgba( 0, 0, 0, 0.1);
     // width: 265px;
     background-color: white;
@@ -386,6 +405,7 @@ h3 {
     font-family: $title;
     color: white;
     margin-top: 0px;
+    font-weight: 300;
 }
 
 .suggest {
@@ -424,5 +444,5 @@ i.fa-hands-helping {
 
 a:link {
     text-decoration: none;
-    color: rgb(0, 38, 255);
+    color: white;
 }
