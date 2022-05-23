@@ -55,7 +55,7 @@ The following tools were used in this project:
 Before starting, you need to have [Git](https://git-scm.com) installed.
 
 # Starting 
-[ohmyfood](https://moonlit-yeot-0639e7.netlify.app/legourmand.html)
+[ohmyfood](https://moonlit-yeot-0639e7.netlify.app/index.html)
 
 
 ## Clone this project
