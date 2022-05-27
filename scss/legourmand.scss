@@ -126,11 +126,6 @@ html::-webkit-scrollbar {
     animation-duration: 5s;
     animation-fill-mode: forwards;
     animation-delay: 2s;
-    @for $i from 1 through 10 {
-        &:nth-child( #{$i}n) {
-            animation-delay: #{$i * 0.5}s;
-        }
-    }
     .food-wrapper {
         display: flex;
         flex-direction: column;
@@ -154,6 +149,56 @@ html::-webkit-scrollbar {
         border-radius: 0px 20px 20px 0px;
         z-index: 1;
     }
+}
+
+.menu-item:nth-child(1n) {
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+
+.menu-item:nth-child(2n) {
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+.menu-item:nth-child(3n) {
+    -webkit-animation-delay: 1.5s;
+    animation-delay: 1.5s;
+}
+
+.menu-item:nth-child(4n) {
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+}
+
+.menu-item:nth-child(5n) {
+    -webkit-animation-delay: 2.5s;
+    animation-delay: 2.5s;
+}
+
+.menu-item:nth-child(6n) {
+    -webkit-animation-delay: 3s;
+    animation-delay: 3s;
+}
+
+.menu-item:nth-child(7n) {
+    -webkit-animation-delay: 3.5s;
+    animation-delay: 3.5s;
+}
+
+.menu-item:nth-child(8n) {
+    -webkit-animation-delay: 4s;
+    animation-delay: 4s;
+}
+
+.menu-item:nth-child(9n) {
+    -webkit-animation-delay: 4.5s;
+    animation-delay: 4.5s;
+}
+
+.menu-item:nth-child(10n) {
+    -webkit-animation-delay: 5s;
+    animation-delay: 5s;
 }
 
 @keyframes full-load {
