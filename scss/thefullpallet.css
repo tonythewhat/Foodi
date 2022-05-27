@@ -29,9 +29,11 @@ html::-webkit-scrollbar {
 }
 
 .header-link {
-  width: 100%;
-  display: block;
-  max-block-size: 100%;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 15px;
 }
 
 .loading-page {
@@ -49,7 +51,7 @@ html::-webkit-scrollbar {
   background-color: #f2f2f2;
   margin-top: -15px;
   padding: 5px;
-  border-radius: 20px 20px 0 0;
+  border-radius: 30px 30px 0 0;
   position: relative;
   z-index: 1;
   display: flex;
@@ -167,7 +169,7 @@ html::-webkit-scrollbar {
 .menu-item .check {
   visibility: hidden;
   color: white;
-  max-width: 0px;
+  width: 0px;
   position: relative;
   right: 0px;
   padding: 20px 14px;
